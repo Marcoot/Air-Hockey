@@ -11,6 +11,7 @@ namespace BaseProject.GameStates
     {
         private PlayerCircle player;
         Puck puck;
+        Wall upperWall, lowerWall, leftWall, rightWall;
 
         /// <summary>
         /// PlayState constructor which adds the different gameobjects and lists in the correct order of drawing.
@@ -22,6 +23,18 @@ namespace BaseProject.GameStates
 
             puck = new Puck(Vector2.Zero);
             Add(puck);
+
+            upperWall = new Wall(Vector2.Zero, "spr_wall");
+            Add(upperWall);
+
+            lowerWall = new Wall(Vector2.Zero, "spr_wall");
+            Add(lowerWall);
+
+            leftWall = new Wall(Vector2.Zero, "spr_wall_gate");
+            Add(leftWall);
+
+            rightWall = new Wall(Vector2.Zero, "spr_wall_gate");
+            Add(rightWall);
 
             // Add initialization logic here
         }
