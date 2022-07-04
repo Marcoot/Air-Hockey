@@ -20,6 +20,8 @@ namespace BaseProject.GameStates
         /// </summary>
         public PlayingState()
         {
+            Add(new SpriteGameObject("spr_background"));
+
             player = new PlayerCircle(new Vector2(400, 300), "circle");
             Add(player);
 
