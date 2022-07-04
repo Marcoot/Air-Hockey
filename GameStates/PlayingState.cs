@@ -1,5 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 using SimPhy_Jun2021.GameObjects;
+using SimPhy_Jun2022.GameObjects;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -9,6 +10,7 @@ namespace BaseProject.GameStates
     class PlayingState : GameObjectList
     {
         private PlayerCircle player;
+        Puck puck;
 
         /// <summary>
         /// PlayState constructor which adds the different gameobjects and lists in the correct order of drawing.
@@ -17,6 +19,9 @@ namespace BaseProject.GameStates
         {
             player = new PlayerCircle(new Vector2(400, 300), "circle");
             Add(player);
+
+            puck = new Puck(Vector2.Zero);
+            Add(puck);
 
             // Add initialization logic here
         }
