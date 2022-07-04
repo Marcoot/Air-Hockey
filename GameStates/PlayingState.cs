@@ -13,6 +13,7 @@ namespace BaseProject.GameStates
         Puck puck;
         Wall upperWall, lowerWall, leftWall, rightWall;
         Pusher pusher;
+        Obstacle obstacle;
 
         /// <summary>
         /// PlayState constructor which adds the different gameobjects and lists in the correct order of drawing.
@@ -27,6 +28,9 @@ namespace BaseProject.GameStates
 
             puck = new Puck(Vector2.Zero);
             Add(puck);
+
+            obstacle = new Obstacle(Vector2.Zero);
+            Add(obstacle);
 
             upperWall = new Wall(Vector2.Zero, "spr_wall");
             Add(upperWall);
