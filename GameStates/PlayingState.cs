@@ -12,6 +12,7 @@ namespace BaseProject.GameStates
         private PlayerCircle player;
         Puck puck;
         Wall upperWall, lowerWall, leftWall, rightWall;
+        Pusher pusher;
 
         /// <summary>
         /// PlayState constructor which adds the different gameobjects and lists in the correct order of drawing.
@@ -20,6 +21,9 @@ namespace BaseProject.GameStates
         {
             player = new PlayerCircle(new Vector2(400, 300), "circle");
             Add(player);
+
+            pusher = new Pusher(Vector2.Zero);
+            Add(pusher);
 
             puck = new Puck(Vector2.Zero);
             Add(puck);
